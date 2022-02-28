@@ -15,6 +15,17 @@ class BoardsController < ApplicationController
     @board = Board.find(params[:id])
   end
 
+  def edit
+    @board = Board.find(params[:id])
+  end
+
+  #インスタンスをviewに渡す必要がないためローカル変数に代入に修正
+  def update
+    board = Board.find(params[:id])
+    board.update(board_params)
+    redirect_to board
+  end
+
   private
 
   def board_params
