@@ -13,6 +13,9 @@ class BoardsController < ApplicationController
   def create
     board = Board.create(board_params)
     redirect_to board
+    #https://rebellhq.slack.com/services/3185198262914
+    notifier = Slack::Notifier.new('https://hooks.slack.com/services/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',channel: '#' + 'note作成')
+    notifier.ping "#{board.name}が作成されました"
   end
 
   def show
