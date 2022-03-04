@@ -34,8 +34,8 @@ gem 'mini_racer'
 gem 'kaminari'
 gem 'slack-notifier'
 gem 'dotenv'
-gem 'sidekiq'
-gem 'sidekiq-scheduler'
+# gem 'sidekiq'
+# gem 'sidekiq-scheduler'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

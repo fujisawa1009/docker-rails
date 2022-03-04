@@ -13,6 +13,6 @@ module App
     # -- all .rb files in that directory are automatically loaded.
     config.i18n.default_locale = :ja
     config.time_zone = 'Tokyo'
-    config.active_job.queue_adapter = :sidekiq
+    # config.active_job.queue_adapter = :sidekiq
   end
 end
