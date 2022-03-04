@@ -34,6 +34,7 @@ gem 'mini_racer'
 gem 'kaminari'
 gem 'slack-notifier'
 gem 'dotenv'
+gem 'rails-i18n'
 # gem 'sidekiq'
 # gem 'sidekiq-scheduler'
 
