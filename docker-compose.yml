@@ -31,7 +31,7 @@ services:
     command: bundle exec sidekiq
     volumes:
       - ./src:/app
-      - gem_data:/Users/fujisawa/.rbenv/shims/bundle
+      - gem_data:/usr/local/bundle
     environment:
       REDIS_URL: redis://redis:6379
     depends_on:
