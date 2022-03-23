@@ -3,5 +3,7 @@
   <div class="ml-auto boards__linkBox">
     <%= link_to '一覧', boards_path, class: 'btn btn-outline-dark' %>
   </div>
-</div>
+</div>b
+<!– partialでview呼び出し、_form.html.erbで
+直接インスタンス変数を参照するとバグ元になるためこちらに移動 –>
 <%= render partial: 'form', locals: { board: @board } %>
