@@ -22,7 +22,7 @@
   </tr>
   </thead>
   <tbody>
-  <% @boards.each do |board| %>
+  <% @boards.reverse.each do |board| %>
     <tr>
       <td><%= board.id %></td>
       <td><%= board.title %></td>
