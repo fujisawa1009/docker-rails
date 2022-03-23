@@ -26,8 +26,9 @@ class BoardsController < ApplicationController
     end
   end
 
+  #保存されていない空のコメント@board.commentsも含まれるため修正
   def show
-    @comment = @board.comments.new
+    @comment = Comment.new(board_id: @board.id)
   end
 
   def edit
