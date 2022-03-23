@@ -1,0 +1,13 @@
+<%= provide(:title, "収入の記録") %>
+<% content_for(:body_attributes) do %>
+data-turbolinks="false"
+<% end %>
+<section class="section-wrapper post-section-wrapper">
+
+<%= render partial: "income_form", locals: {  selected_user: current_user.id,
+                                            payment_at: Time.zone.today,
+                                            content: "",
+                                            price: "",
+                                            edit_flag: false  } %>
+
+</section>

@@ -1,0 +1,102 @@
+// Place all the styles related to the FixedCosts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.fixed-cost-main-section {
+  margin: 20px 0 60px 0;
+  padding: 0px;
+  top: 130px;
+  right: 0;
+  width: 100%;
+  border: none;
+
+  .before-modal {
+    line-height: 38px;
+  }
+  
+  .fixed-cost-index-btn-wrapper {
+    .btn {
+      width: 45%;
+      margin: 10px auto 0;
+    }
+  }
+
+  .fixed-cost {
+    .check-box {
+      width: 6%;
+    }
+  }
+
+  .card {
+    margin: 5px 0;
+    padding: 7px;
+    flex-direction: row;
+    font-size: 0.9em;
+    width: 94%;
+
+    .small-font {
+      font-size: 10px;
+    }
+
+    .category-name {
+      align-items: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .post_content {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .user-name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: right;
+    }
+  }
+
+}
+
+.modal-body {
+  li {
+    margin-bottom: 20px;
+  }
+}
+
+//  new
+.sub-info-wrapper {
+  text-align: right;
+  margin-top: -14px;
+
+  .sub-info {
+    text-align: left;
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+.payment-date-wrapper {
+  justify-content: start;
+  align-items: center;
+
+  .form-label {
+    margin: 3px 0;
+  }
+
+  .every-month {
+    text-align: right;
+  }
+
+  .form-control {
+    margin: 3px 0;
+    width: 56%;
+  }
+}
+
+#fixed_cost_content {
+  width: 85%;
+}

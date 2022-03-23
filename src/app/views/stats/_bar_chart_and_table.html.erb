@@ -1,0 +1,57 @@
+<%= column_chart @bar_chart, stacked: true, 
+                            height: "50vh", 
+                            # width: "284vw", 
+                            legend: {display: false} %>
+
+<ul class="stat-table post-table">
+    <li class="stat-table-head">
+      <span class="span-head"></span>
+      <% 12.times do |i| %>
+      <span class="span-data"><%= i+1 %>月</span>
+      <% end %>
+    </li>
+    
+    <% @bar_chart.each do |category| %>
+    <li class="category">
+      <span class="span-head" style="color: <%= category[:color] %>;"><%= category[:name] %></span>
+      <% 12.times do |i| %>
+        <span class="span-data"><%= yen category[:data][i][1] %></span>
+      <% end %>
+    </li>
+    <% end %>
+
+  </ul>
+
+  <ul class="stat-table income-table">
+    <li class="post-sum">
+      <span class="span-head">支出計</span>
+      <% 12.times do |i| %>
+        <span class="span-data"><%= yen @post_array[i] %></span>
+      <% end %>
+    </li>
+    <li class="income-sum">
+      <span class="span-head">収入計</span>
+      <% 12.times do |i| %>
+        <span class="span-data"><%= yen @income_array[i] %></span>
+      <% end %>
+    </li>
+    <li class="month-total">
+      <span class="span-head">月収支</span>
+      <% 12.times do |i| %>
+      <span class="span-data" style="color:<%= price_color(@month_total_array[i]) %> ;">
+          <%= plus_minus @month_total_array[i] %>
+      </span>
+      <% end %>
+    </li>
+  </ul>
+  
+  <ul class="stat-table remainder-table">
+    <li class="remainder">
+      <span class="span-head">年収支</span>
+      <% 12.times do |i| %>
+      <span class="span-data remainder_<%=i+1%>" style="color:<%= price_color(@remainder_array[i]) %> ;">
+          <%= plus_minus @remainder_array[i] %>
+      </span>
+      <% end %>
+    </li>
+  </ul>                      

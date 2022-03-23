@@ -1,0 +1,15 @@
+<header>
+  <nav class="nav header-nav">
+    <%= link_to root_path, id: "logo", class: "logo" do %>
+      <%= image_pack_tag "media/images/logo_small_kyodokoza.png" %>
+    <% end %>
+        <% if logged_in? %>
+          <%= link_to user_path(current_user), class: "config-icon" do %>
+            <i class="fas fa-lg fa-home"></i>
+          <% end %>
+        <% end %>
+  </nav>
+  <div class="page-title-container">
+    <h1 class="page-title"><%= yield(:title) %></h1>
+  </div>
+</header>

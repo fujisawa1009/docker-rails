@@ -1,0 +1,14 @@
+<%= provide(:title, "記録の編集") %>
+<% content_for(:body_attributes) do %>
+data-turbolinks="false"
+<% end %>
+<section class="section-wrapper post-section-wrapper">
+
+<%= render partial: "post_form", locals: {  selected_category: @post.category_id, 
+                                            selected_user: @post.user_id,
+                                            payment_at: @post.payment_at.strftime("%Y-%m-%d"),
+                                            content: @post.content,
+                                            price: @post.price,
+                                            edit_flag: true  } %>
+
+</section>

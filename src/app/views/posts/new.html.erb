@@ -1,0 +1,14 @@
+<%= provide(:title, "支出の記録") %>
+<% content_for(:body_attributes) do %>
+data-turbolinks="false"
+<% end %>
+<section class="section-wrapper post-section-wrapper">
+
+<%= render partial: "post_form", locals: {  selected_category: 1, 
+                                            selected_user: current_user.id,
+                                            payment_at: Time.zone.today,
+                                            content: "",
+                                            price: "",
+                                            edit_flag: false  } %>
+
+</section>

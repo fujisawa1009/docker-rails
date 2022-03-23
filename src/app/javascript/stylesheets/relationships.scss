@@ -1,0 +1,52 @@
+// Place all the styles related to the Relationships controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.invitation-code-form {
+  .form-label {
+    margin-top: 15px;
+  }
+}
+
+.invitation-code-making{
+  a {
+    margin: 20px auto ;
+  }
+  
+  .invitation-code-display {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+    
+    input {
+      width: 85%;
+    }
+    
+    .copy-btn {
+      padding: 3px;
+      width: 12%;
+      background-color: #eee;
+      border-radius: 2px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+  }
+}
+  
+
+// relationships/show
+
+.relationship-info {
+  li {
+    display: flex;
+    justify-content: space-between;
+
+    .relationship-info-name {
+      margin: 0 5px;
+    }
+  }
+}

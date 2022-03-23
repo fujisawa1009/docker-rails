@@ -1,0 +1,15 @@
+<%= provide(:title, "収入の編集") %>
+<% content_for(:body_attributes) do %>
+data-turbolinks="false"
+<% end %>
+<section class="section-wrapper post-section-wrapper">
+
+<%= render partial: "income_form", locals: {  selected_user: @income.user_id,
+                                            payment_at: @income.payment_at.strftime("%Y-%m-%d"),
+                                            content: @income.content,
+                                            price: @income.price,
+                                            edit_flag: true  } %>
+
+  <%= render "shared/calculator" %>
+
+</section>

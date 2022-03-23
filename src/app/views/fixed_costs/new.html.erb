@@ -1,0 +1,14 @@
+<%= provide(:title, "テンプレートの作成") %>
+<% content_for(:body_attributes) do %>
+data-turbolinks="false"
+<% end %>
+<section class="section-wrapper post-section-wrapper">
+
+<%= render partial: "fixed_cost_form", locals: {  selected_category: 1, 
+                                                  selected_user: current_user.id,
+                                                  payment_at: 1,
+                                                  content: "",
+                                                  price: "",
+                                                  edit_flag: false  } %>
+
+</section>

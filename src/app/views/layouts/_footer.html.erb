@@ -1,0 +1,30 @@
+<% if logged_in? && current_user.relationship.present? %>
+<footer class="position-fixed bottom-0">
+  <nav class="nav footer-nav">
+    <%= link_to posts_path, class: "nav-link" do%>
+    <i class="fas fa-list-ul"></i>
+    <p>一覧</p>
+    <% end %>
+    <%= link_to new_income_path, class: "nav-link" do %>
+    <i class="fas fa-coins"></i>
+    <p>収入</p>
+    <% end %>
+    <%= link_to new_post_path, class: "nav-link" do %>
+    <i class="fas fa-lg fa-pencil-alt"></i>
+    <p>支出</p>
+    <% end %>
+    <%= link_to stats_month_path, class: "nav-link" do %>
+    <i class="fas fa-chart-pie"></i>
+    <p>月合計</p>
+    <% end %>
+    <%= link_to stats_year_path, class: "nav-link" do %>
+    <i class="fas fa-chart-bar"></i>
+    <p>年合計</p>
+    <% end %>
+    <%= link_to news_path, class: "nav-link" do %>
+    <i class="far fa-newspaper"></i>
+    <p>news</p>
+    <% end %>
+  </nav>
+</footer>
+<% end %>

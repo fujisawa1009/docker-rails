@@ -1,0 +1,5 @@
+<%= provide(:title, "カテゴリの編集") %>
+<section class="section-wrapper">
+  <%= render partial: "category_form", locals: {btn_text: "カテゴリの更新"} %>
+  <%= link_to "カテゴリの削除", category_path(@category), method: :delete, class: "btn danger-btn btn-primary category-delete-btn", data: { confirm: "本当に削除しますか？"} %>
+</section>

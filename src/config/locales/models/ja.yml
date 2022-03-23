@@ -1,0 +1,27 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        name: ニックネーム
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード（確認）
+      category:
+        name: カテゴリの名前
+        content: カテゴリの説明
+        color: カテゴリカラー
+        target_price: 目標金額
+      post:
+        category_id: カテゴリ
+        user_id: ユーザー
+        content: 内容
+        price: 金額
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M:%S"
+      date: "%Y/%m/%d"
+      short_date: "%m/%d"
+      short_date_with_time: "%m/%d %H:%M"
+      short: "%d"
+
+# https://qiita.com/satreu16/items/a072a4be415f30087ed7

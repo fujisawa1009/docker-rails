@@ -1,0 +1,168 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+//new
+form {
+  .sub-info {
+    // @include moderate(gray);
+    font-size: 0.8em;
+    // margin-bottom: 10px;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .checkbox-set {
+    input {
+      margin-right: 10px;
+    }
+    
+    a {
+      color: #0d6efd;
+    }
+  }
+  
+  .standerd-btn {
+    margin-top: 30px;
+  }
+}
+
+
+// show
+.user-show {
+  max-width: 768px;
+  margin: 0 auto;
+
+  .tips {
+    font-size: 14px;
+  }
+
+  a:hover, a:focus {
+    text-decoration: none;
+  }
+
+  .activity {
+    ul {
+      width: 95%;
+      
+      li {
+        font-size: 0.9rem;
+
+        strong {
+          font-size: 12px;
+        }
+        p {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+  
+  .menu-btns {
+    .menu-btn {
+      height: 15vh;
+      margin: 5px;
+      padding: 5px;
+      width: 30%;
+
+      .fa-sign-out-alt {
+        color: $indigo-300;
+      }
+      .fa-user-cog {
+        color: $red-300;
+      }
+      .fa-folder-open {
+        color: $orange-300;
+      }
+      .fa-file-export, .fa-user-friends {
+        color: $green-300;
+      }
+      .fa-file-excel {
+        color: $cyan-300;
+      }
+      
+      .btn-description {
+        font-size: 8px;
+      }
+    }
+
+    .menu-btn:last-of-type {
+      padding: 0;
+
+      .card {
+        width: 100%;
+        text-align: center;
+        height: 7.5vh;
+      }
+    }
+  }
+}
+
+.admin-section {
+  .addresses {
+    margin: 0 15px;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+}
+
+// edit
+
+.section-wrapper {
+  margin: 10px auto ;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+
+  h2 {
+    margin: 0 0 10px 0;
+    text-align: left;
+    font-weight: bold;
+  }
+}
+
+
+
+// sessions/new (login)
+
+.login-form {
+  .form-label {
+    margin: 15px 0 5px 0;
+  }
+
+  .fill-password-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0px;
+  
+    .fill-password-info {
+      margin: 15px 0 5px 0;
+    }
+  
+    .moderate {
+      margin: 15px 0 5px 0;
+    }
+  }
+
+  .checkbox{
+    display: flex;
+    align-items: center;
+
+    input {
+      margin-right:  5px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+
+// reset/new(パスワード変更)
+.password-reset-form {
+  margin-top: 20px;
+}

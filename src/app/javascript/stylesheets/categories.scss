@@ -1,0 +1,138 @@
+// Place all the styles related to the Categories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+div {
+  margin: 0;
+}
+
+
+// index
+@mixin left_col {
+  flex-basis: 10%;
+  margin: 0;
+}
+@mixin center_col {
+  flex-basis: 60%;
+  margin: 0;
+}
+@mixin right_col {
+  flex-basis: 30%;
+  margin: 0;
+  text-align: right;
+}
+
+.new-category-btn {
+  margin: 20px auto;
+}
+
+.category-index-list {
+  
+  .category-index-head {
+    &:first-child {
+      @include center_col;
+      text-align: right;
+    }
+  
+    &:last-child {
+      @include right_col;
+    }
+  }
+  
+  .card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px auto;
+    padding: 5px;
+    border-radius: 4px;
+    border: 0;
+    background-color: #fff;
+    box-shadow: rgb(0 0 0 / 30%) 0 0 2px;
+  
+    .color-wrapper {
+      @include left_col;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      .category-color{
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+      }
+    }
+    
+    
+    .content-wrapper {
+      @include center_col;
+      display: flex;
+      flex-direction: column;
+  
+      .category-name {
+        font-weight: bold;
+      }
+  
+      .category-content {
+        font-size: 0.8em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #ccc;
+      }
+  
+    }
+  
+    .target-price-wrapper {
+      @include right_col;
+    }
+  
+  }
+
+}
+
+.section-wrapper {
+
+  .category-delete-btn {
+    margin: 30px auto;
+  }
+}
+
+
+// taeget_setting
+
+.taeget-setting-table {
+  font-size: 0.9rem;
+
+  li {
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    
+    
+    .category-name {
+      display: flex;
+      align-items: center;
+    }
+    
+    .form-control {
+      padding: 2px;
+      text-align: right;
+    }
+  }
+
+  .target-prices-head {
+    justify-content: flex-end;
+    border: none;
+
+    span {
+      text-align: center;
+    }
+  }
+  
+  .pie_chart_sum {
+    justify-content: space-between;
+  }
+}
+

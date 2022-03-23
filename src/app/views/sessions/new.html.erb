@@ -1,0 +1,24 @@
+<%= provide(:title, "ログイン") %>
+  <div class="form login-form">
+    <%= form_with(scope: :session, url: login_path, local: true) do |f| %>
+      <%# <%= render 'shared/error_messages' %>
+      <%= f.label :email, "メールアドレス：", class: "form-label" %>
+      <%= f.email_field :email, class: "form-control" %>
+
+      <div class="fill-password-wrapper">
+        <%= f.label :password, "パスワード：", class: "form-label fill-password-info" %>
+        <%= link_to "（パスワード再発行）", new_password_reset_path, class: "moderate fill-password-info" %>
+      </div>
+      <%= f.password_field :password, class: "form-control" %>
+      <p class="sub-info">8文字以上20文字以内</p>
+
+      <%= f.label :remember_me, class: "checkbox inline" do %>
+        <%= f.check_box :remember_me %>
+        <p>次回から自動でログイン</p>
+      <% end %>
+
+      <%= f.submit "ログイン" ,class: "btn standerd-btn btn-primary" %>
+
+    <% end %>
+    <%= link_to "まだ登録されてない方はこちら", new_user_path, class: "moderate" %>
+  </div>
