@@ -5,9 +5,9 @@ require 'open-uri'
 require 'fileutils'
 require 'pp'
 
-name = "test0516_anther_2" #適宜ここをユーザー名に書き換えて使ってくれ/フォルダ名となる！！
+name = "test0516_anther_2" #適宜ここ変更
 #target_url = "https://twitter.com/" + name + "/media"
-target_url = "https://yuranoyoshi.com/lol-2"  #ここがDLしたいURLとなる
+target_url = "https://yuranoyoshi.com/lol-2"
 pp target_url
 
 ary = []
@@ -19,7 +19,7 @@ open(target_url) {|f|
 #\S	は 空白文字（半角スペース、\t、\n、\r、\f）以外すべて
 #正規表現の説明　https://www.megasoft.co.jp/mifes/seiki/meta.html
 url = []
-#ここがtarget_urlに存在する、実際の画像ファイルのリンクとなる
+
 #match = %r|https://pbs.twimg.com/media/\S*.jpg|
 #match = %r|https://waral.club/wp-content/uploads/2022/02/\S*.jpg|
 #match = %r|https://waral.club/wp-content/uploads/2022/*/\S*.jpg|
